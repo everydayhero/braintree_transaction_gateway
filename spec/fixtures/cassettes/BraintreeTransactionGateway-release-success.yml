@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://<BRAINTREE_PUBLIC_KEY>:<BRAINTREE_PRIVATE_KEY>@api.sandbox.braintreegateway.com/merchants/<BRAINTREE_MERCHANT_ID>/transactions/g8fyvr/release_from_escrow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/xml
+      user-agent:
+      - Braintree Ruby Gem 2.26.0
+      accept-encoding:
+      - gzip
+      x-apiversion:
+      - '3'
+      authorization:
+      - Basic czVwOWJoenZyNTZxdnBqcTpkYWUwMmI3NGM3OTMyNGI3ZTAxZjY4NDQwZGZmOTJjYw==
+      content-type:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 13 Dec 2013 05:00:39 GMT
+      x-frame-options:
+      - SAMEORIGIN
+      x-authentication:
+      - basic_auth
+      x-user:
+      - m5vb6btkgbpmbxf7
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - cc726bf46ed642c2720690369c142619
+      x-runtime:
+      - '0.124701'
+      x-broxyid:
+      - a375ccc0-c03d-4b72-a69f-dde3d9787f68
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-type:
+      - application/xml; charset=utf-8
+      etag:
+      - ! '"74f452d70b3d6c59aa201167af6bcc0e"'
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '1276'
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA+1YS2/jNhC+51cYPvTGyM6jDVJZwQJFgR4WWGA3e+jFoMSx
+        xZoiWZJy7P31HUq0HhGVpocWRVHDB3Pm45DzHjp9OlVicQRjuZKb5fp6tVyA
+        LBTjcr9ZPn/5mTwsn7Kr1BkqLS0corKrxSLlLNs/7M5Hkyb401Oso662mQXn
+        BLA0CWvPcmcNmaUC0qT56WlFbQwedCbcKoLnQfb8+ac0mZI9mFaqli5br1bX
+        q1WahKXnVGCKkkpHaFF4IsHb5LTKudXUHATYLZd4E+nSJAb1IpRhYPzCgXUE
+        bGHUy/rmNk06RnNfA9QBI9QtvA6bJcOl4xUss5vV+pasb/D7ZbV+vL97vPnh
+        V9Sk29DsrzV7//4H3N9vCPayTqEKftHYfyG52CydqWGZBOKOG9RA0goiTEHn
+        eYWqNJXnCAcqykWE/gK55S4mS5dKxug7enpN9e7utUpzLgSG3T+soXUGAIOC
+        MQPWxkxwciCZ98QsRKiCCu5i4g3sMWdidlIYl6KJ8eh9MULNeV6dlu13Eyp0
+        SW/ehbr9M5Ss0Ru8mHpq4BzUaVdLRqYe6jk2RDk1hp5HTDTkoJjEhLQlpAJM
+        0Zy6ovQp2OfIdia9Y7saaSXX+v+w+peG1dA7ocaRHQfB7LBADEn0aAkYowxB
+        q2klLUSVbXADY4zR2S/YRd4EXESM/RiX8iamUex4fEX9iKpNiB66x6L/Qs/I
+        +Q3aDME+YqeuTrVRBZ6GdqC1K5Xh32gDbyTdfl59/PopTd4EjaWMr4KtdjXc
+        Pr1ohOcwprMPGjlHPwHMIfzuo+KFN/kOXYkOwPjIwUx1rH3Lxn1tK55BOXoi
+        7UgQZcEJKn3purlSAqhcZjsqrJ9HOsClyzPuSEENC2Hs1AFieZZzmd2t/cfX
+        RjmsFXdZSw6LkA4okjTTz1duKXq/W1/KgeamdU6lpCuz1X2aTIgT7Bmo8cXx
+        bgRuqOHc0GGJLybN+Pb8ue+7PbW/ZalEY+x4ieAV3QOpjchK57R9TBJqsfTa
+        69xQLn0ihAi+xtqYaHr2FXlbAUYf2wq1V8kR9b/Wcv8E8siNkh6wsVSyXJ2+
+        o5X+8TKobTnb5C8yL4qHO6fZ798fvu1x3OwuEAqeAU2x1j/Lg1Qv0oddS2jZ
+        JVDhStQLesSA1oIY5Nz1/HYZWLVB92Kk7mvh57EB6jWnawleAU5FDx3QwqXp
+        2SgxQFwIwcjW1lgUsZHJQ48ZUcdFVu2I51JZwPDUKfNiM8XqopmAB2braC3o
+        CLJSxLLDTOp0/FCpx6kT3gOk5Bhp5jwaB7oW2SAABQVr+3zDkRgZlX7nmNzh
+        Ownh4XEpeOO3SIOYfU403NriPIpiMYCVBnzgNITufoPZxSqsT5B9+IR9IEJv
+        tUymav7Nmts6r7jDiNzulNn2c9F/yg4Pj+s1ft+0w/Qp+k61p3UvrvFfUbej
+        hIxoG5yg8RG4zvEdyvXsiDzgdw2pGdAJuoorRnC2JN5y0dY1QuK1jIti8cqv
+        zklxxiHYySPTPeO2KThRHrRS1KUrzTSX6NvR1+Phdpx9/b8EqMFMYer4bUvH
+        ViJh8obFV4Y5+hlkBxCmh+y+iYcIw+PbPwZIiCUDeKSFrUY740nYfUfsYJC8
+        NrZ9kjBw+JC2l6YyYsW9NHjPxIebMWbyx8k74XDyBsKOauLX8E82jFkcvyN+
+        iWo4Sors6g8W2BBaYhIAAA==
+    http_version: '1.1'
+  recorded_at: Fri, 13 Dec 2013 05:00:38 GMT
+recorded_with: VCR 2.8.0

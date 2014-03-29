@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<BRAINTREE_PUBLIC_KEY>:<BRAINTREE_PRIVATE_KEY>@api.sandbox.braintreegateway.com/merchants/<BRAINTREE_MERCHANT_ID>/transactions/garbage
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/xml
+      user-agent:
+      - Braintree Ruby Gem 2.26.0
+      accept-encoding:
+      - gzip
+      x-apiversion:
+      - '3'
+      authorization:
+      - Basic MjhrZzVubTR2cGNxN3k2cDpkYzhiZTZlMmQzZDY2ZDU4ZmQ3MWFlZDAwMGFmNWFlYw==
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Wed, 15 Jan 2014 00:26:22 GMT
+      x-frame-options:
+      - SAMEORIGIN
+      x-authentication:
+      - basic_auth
+      x-request-id:
+      - cc18cfe67bd800f5da0ded7dd8edd97f
+      x-runtime:
+      - '0.039292'
+      x-broxyid:
+      - f1f9c450-ea2d-4937-9a74-4579811b6c47
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - no-cache
+      content-type:
+      - application/xml; charset=utf-8
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '20'
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwMAAAAAAAAAAAA=
+    http_version: '1.1'
+  recorded_at: Wed, 15 Jan 2014 00:26:22 GMT
+recorded_with: VCR 2.8.0

@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<BRAINTREE_PUBLIC_KEY>:<BRAINTREE_PRIVATE_KEY>@api.sandbox.braintreegateway.com/merchants/<BRAINTREE_MERCHANT_ID>/transactions/does-not-exist/refund
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<transaction>\n  <amount
+        nil=\"true\"/>\n</transaction>\n"
+    headers:
+      accept:
+      - application/xml
+      user-agent:
+      - Braintree Ruby Gem 2.26.0
+      accept-encoding:
+      - gzip
+      x-apiversion:
+      - '3'
+      authorization:
+      - Basic czVwOWJoenZyNTZxdnBqcTpkYWUwMmI3NGM3OTMyNGI3ZTAxZjY4NDQwZGZmOTJjYw==
+      content-type:
+      - application/xml
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Mon, 16 Dec 2013 09:55:00 GMT
+      x-frame-options:
+      - SAMEORIGIN
+      x-authentication:
+      - basic_auth
+      x-request-id:
+      - f8a3f3b158bf4ab2452855b74e92243e
+      x-runtime:
+      - '0.034858'
+      x-broxyid:
+      - 213516ff-c94c-4873-bcf0-46c8512f64db
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - no-cache
+      content-type:
+      - application/xml; charset=utf-8
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '20'
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwMAAAAAAAAAAAA=
+    http_version: '1.1'
+  recorded_at: Mon, 16 Dec 2013 09:55:15 GMT
+recorded_with: VCR 2.8.0

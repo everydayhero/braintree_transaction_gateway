@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://<BRAINTREE_PUBLIC_KEY>:<BRAINTREE_PRIVATE_KEY>@api.sandbox.braintreegateway.com/merchants/<BRAINTREE_MERCHANT_ID>/transactions/notarealid/release_from_escrow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/xml
+      user-agent:
+      - Braintree Ruby Gem 2.26.0
+      accept-encoding:
+      - gzip
+      x-apiversion:
+      - '3'
+      authorization:
+      - Basic czVwOWJoenZyNTZxdnBqcTpkYWUwMmI3NGM3OTMyNGI3ZTAxZjY4NDQwZGZmOTJjYw==
+      content-type:
+      - application/xml
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Thu, 12 Dec 2013 03:14:55 GMT
+      x-frame-options:
+      - SAMEORIGIN
+      x-authentication:
+      - basic_auth
+      x-request-id:
+      - 66c3c7df243f0f4fa3f15979ebf5b629
+      x-runtime:
+      - '0.035416'
+      x-broxyid:
+      - 6c3acc99-b189-47a4-81b8-06db1d6d59b1
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - no-cache
+      content-type:
+      - application/xml; charset=utf-8
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '20'
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwMAAAAAAAAAAAA=
+    http_version: '1.1'
+  recorded_at: Thu, 12 Dec 2013 03:14:55 GMT
+recorded_with: VCR 2.8.0

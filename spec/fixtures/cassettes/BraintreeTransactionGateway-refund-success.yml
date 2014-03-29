@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<BRAINTREE_PUBLIC_KEY>:<BRAINTREE_PRIVATE_KEY>@api.sandbox.braintreegateway.com/merchants/<BRAINTREE_MERCHANT_ID>/transactions/9tdbbw/refund
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<transaction>\n  <amount
+        nil=\"true\"/>\n</transaction>\n"
+    headers:
+      accept:
+      - application/xml
+      user-agent:
+      - Braintree Ruby Gem 2.26.0
+      accept-encoding:
+      - gzip
+      x-apiversion:
+      - '3'
+      authorization:
+      - Basic czVwOWJoenZyNTZxdnBqcTpkYWUwMmI3NGM3OTMyNGI3ZTAxZjY4NDQwZGZmOTJjYw==
+      content-type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      date:
+      - Mon, 16 Dec 2013 09:56:58 GMT
+      x-frame-options:
+      - SAMEORIGIN
+      x-authentication:
+      - basic_auth
+      x-user:
+      - m5vb6btkgbpmbxf7
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - ea2baa16e844f9d47b4ea2a20e526904
+      x-runtime:
+      - '0.191756'
+      x-broxyid:
+      - 6bef6192-7cb4-4485-a796-b9ad08fc69ce
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-type:
+      - application/xml; charset=utf-8
+      etag:
+      - ! '"59ad92885d31f325a3f58a36827ef630"'
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '1215'
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA+1XS2/jNhC+51cYPvTGyLKTbJzKCgoUBXpbYDd76MWgxJHF
+        hiJVkvJjf32HkqxHRKXZS9FDfbJmPpLz4jfD6PlciMURtOFK7pbh7Wq5AJkq
+        xuVht3z5+ht5XD7HN5HVVBqaWkTFN4tFxFmcn/OH5BQF+NdJjKW2MrGpkoJb
+        C2yfKb03YK2AAqSNghbgsPZSQpxqYBzl9YeTppXWePaFcKMImgDxy5dfo2Aq
+        dmBaqEraOFytblerKGg/naYAneZUWkLT1AkJGrgOKR5n9lyiFc4YH8gtVpqB
+        dh9ZCNt72KzDT+F2RdNP2X1yn262lKWbx3DzeBcFHbS2XQNFpwm1C+fPbsnw
+        0/IClvF6FW5IuCbhw9fV9un+4el++wd61S2o11cl+7H1/YI2dsYqdMp91OlZ
+        SC52S6srWAatMOPaWCJpAR6loPO6VBUllRePBgrKhUd+gsRw69urzJX0yTN6
+        fit1qe+9ihIuBFblv+yhsRoAy4QxrB/jC8HZgmQuE7MQoVIquPVtr+GAV8oX
+        J4WVKup699qLNasv8+40areaUFHmdP0h1OafULLCbPB0mqlBctCnrJKMTDPU
+        a0xb5VRrehkpMZADrnHXa2tZ4nhmTl+TT8czJKE2zX2Hm5yX5f8F9B8toGF2
+        WjYjGQfBzJAKhiJ6NAS0Vppg1EolDXidrXGDYIzR8S/YO94FXLcY59G/y7uY
+        2rHjcbpyKnTQA9L7iV5Q8yc0tY4dw0xTHZVapXgaxoFWNleaf6c13BuMHjw+
+        EfvoOgrmtDMrLZZu/LmRA/MuryFu+VHx1IU2w5RhoLEOEtBT8yrXlnFd01xn
+        UJaeSdPwvSo4Q1Fe+2iilAAql3FGhQGcNjrAtW/jEEJSqllbrla9gu8+JVzG
+        d6H7ObaTQ064ixtx+9GWPW5J6tnmGzcUs9x9X699yXWTqUJJm8chJmAinGAv
+        QDWOBJu7EbiWtue2PZM40qjntZcvfSftpb2VuRJ1sP1UwAt6AFJpEefWluYp
+        CChm25rbRFMuXcG3lXqLHBiU9OJYeF8AliLbC3VQwRH9vy3l4RnkkWslHWBn
+        qGSJOv9Ei/Ln6zC252yXnGSSpo93tmR/Pbx+P+B82RnQEpuGkiLvv8hXqU7S
+        lV0jaNQ5UGFz9At6xEDWgBgk3Pb65rNVVRrTi5V6qISbsAaot5qO+p0DnIoe
+        OpC1RtOLVmKAuAraIBtTIflh85KvPWYkHZOpyojTUpnC8NSp8hozxaq0nnIH
+        YetkDegIslDEsNeZq9PpW0YeX532AUByjpWmL6MG37XCGgG4URttd99wyEVF
+        UX5w8O3w3Q4/8PKo8bNPh1pbGZw38RAsZ1WCxknbXMdqZ+1g9jAK2QoZ/PPv
+        aNVU3vgcvHW6k7SBanhPUOmdWarEpJqX7azzrr7jqXoSI2g7V4zgaEFcSL2M
+        NkKiWdp6sWjym3MibHEECd4zxjFu6jr06qDZRV3JaoZzvI8Ed02Hy3H0cU9D
+        9GCCdGwiYfIwwTFRH10bygDmGog7Qp1Ik6OJFp1LKm2aSZOBxdePufLGSOWP
+        +GBM9R8/xkxevh+Ew9kFAElT+81wczTWH05Snhh7PRwVeHzzN02zl+U2EAAA
+    http_version: '1.1'
+  recorded_at: Mon, 16 Dec 2013 09:57:13 GMT
+recorded_with: VCR 2.8.0

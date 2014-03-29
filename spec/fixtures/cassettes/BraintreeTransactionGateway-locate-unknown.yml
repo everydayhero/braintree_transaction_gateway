@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<BRAINTREE_PUBLIC_KEY>:<BRAINTREE_PRIVATE_KEY>@api.sandbox.braintreegateway.com/merchants/<BRAINTREE_MERCHANT_ID>/transactions/advanced_search_ids
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<search>\n  <order-id>\n
+        \   <is>chucktesta</is>\n  </order-id>\n</search>\n"
+    headers:
+      accept:
+      - application/xml
+      user-agent:
+      - Braintree Ruby Gem 2.26.0
+      accept-encoding:
+      - gzip
+      x-apiversion:
+      - '3'
+      authorization:
+      - Basic MjhrZzVubTR2cGNxN3k2cDpkYzhiZTZlMmQzZDY2ZDU4ZmQ3MWFlZDAwMGFmNWFlYw==
+      content-type:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 14 Jan 2014 04:31:44 GMT
+      x-frame-options:
+      - SAMEORIGIN
+      x-authentication:
+      - basic_auth
+      x-user:
+      - 2kztmz3phf2x7mmd
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - a1e360ded0e7c6549c37a104f6d0915e
+      x-runtime:
+      - '0.048665'
+      x-broxyid:
+      - f74dfa81-87a4-45c3-814f-07ed7ec11416
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-type:
+      - application/xml; charset=utf-8
+      etag:
+      - ! '"7d94d55bad227b9a3b4e32eb858771fc"'
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '95'
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7MpTk0sSs7QLUotLs0pKbbjUlCwKUhMT9UtzqxKVSipLEi1
+        VcrMK0lNTy1SsjM1sNGHS4KVZqYUQxUlFhUlViqBBfWBonZcNvroRgMA9crn
+        oGwAAAA=
+    http_version: '1.1'
+  recorded_at: Tue, 14 Jan 2014 04:31:44 GMT
+- request:
+    method: post
+    uri: https://<BRAINTREE_PUBLIC_KEY>:<BRAINTREE_PRIVATE_KEY>@api.sandbox.braintreegateway.com/merchants/<BRAINTREE_MERCHANT_ID>/transactions/advanced_search
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<search>\n  <order-id>\n
+        \   <is>chucktesta</is>\n  </order-id>\n  <ids type=\"array\">\n    <item/>\n
+        \ </ids>\n</search>\n"
+    headers:
+      accept:
+      - application/xml
+      user-agent:
+      - Braintree Ruby Gem 2.26.0
+      accept-encoding:
+      - gzip
+      x-apiversion:
+      - '3'
+      authorization:
+      - Basic MjhrZzVubTR2cGNxN3k2cDpkYzhiZTZlMmQzZDY2ZDU4ZmQ3MWFlZDAwMGFmNWFlYw==
+      content-type:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 14 Jan 2014 04:31:45 GMT
+      x-frame-options:
+      - SAMEORIGIN
+      x-authentication:
+      - basic_auth
+      x-user:
+      - 2kztmz3phf2x7mmd
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - a1d6e3f248684cfbb9dfd131ba04a16b
+      x-runtime:
+      - '0.048889'
+      x-broxyid:
+      - 84d51557-8ebf-412c-99e7-520926467142
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-type:
+      - application/xml; charset=utf-8
+      etag:
+      - ! '"f6a15d695505897d2f8895c06d5bcda8"'
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '162'
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA3XOwQrCMAwG4FcZuddtB8FD1918An2A2oVSaNORZkN9essQ
+        kaHH5P9+Ej3eU2xW5BIyDdAfOmiQXJ4C+QGul7M6wWi0Y5yCKGd5UsKWinVS
+        C6WRx4wDuBwjbhuodmFGEjVbj4qWdEN+s0CCHhlMr9sfyuhtKOGJ+8Kx0+0n
+        NFqy2KiCYCp7WeFXauqhP6+bF4223QP7AAAA
+    http_version: '1.1'
+  recorded_at: Tue, 14 Jan 2014 04:31:45 GMT
+recorded_with: VCR 2.8.0
