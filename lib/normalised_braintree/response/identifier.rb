@@ -27,6 +27,7 @@ module NormalisedBraintree
         statuses = %w(
           authorized
           submitted_for_settlement
+          settled
         )
 
         statuses.include? status

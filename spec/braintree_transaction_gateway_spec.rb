@@ -118,6 +118,22 @@ describe BraintreeTransactionGateway do
           expect(@result.transaction_id).to eq("hxwnhb")
         end
       end
+
+      context "settled transaction" do
+        before do
+          use_cassette("locate-settled") do
+            @result = gateway.locate "588a0cdc8a1b2f1043536c66d8ea2821"
+          end
+        end
+
+        it "is successful" do
+          expect(@result.success?).to be_true
+        end
+
+        it "has a transaction_id" do
+          expect(@result.transaction_id).to eq("74j5km")
+        end
+      end
     end
 
     context "for an unknown transaction" do
