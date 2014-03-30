@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = BraintreeTransactionGateway::VERSION
   spec.authors       = ["Tim Cooper", "Jonathon M. Abbott"]
   spec.email         = ["coop@latrobest.com", "jma@dandaraga.net"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Braintree Transaction API Gateway}
+  spec.homepage      = "https://github.com/everydayhero/braintree_transaction_gateway"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
