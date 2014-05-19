@@ -54,6 +54,36 @@ describe BraintreeTransactionGateway do
     end
   end
 
+  describe "#refund_settled_at" do
+    it "returns nil for a refund that has not settled yet" do
+      use_cassette("refunded_at-incomplete") do
+        refund_transaction_id = 'dq39dg'
+
+        @result = gateway.refund_settled_at(refund_transaction_id)
+
+        expect(@result).to be_nil
+      end
+    end
+
+    it "returns when the refund settled for a refund that has settled" do
+      use_cassette("refunded_at-complete") do
+        refund_transaction_id = '3tgqq2'
+        expected_time = Time.utc 2014, 2, 4, 8, 15, 10
+
+        @result = gateway.refund_settled_at(refund_transaction_id)
+
+        expect(@result).to eq expected_time
+      end
+    end
+
+    it "raises TransactionMissing when the refund doesn't exist" do
+      use_cassette("refunded_at-missing") do
+        expect { gateway.refund_settled_at("garbage") }
+          .to raise_error(BraintreeTransactionGateway::TransactionMissing)
+      end
+    end
+  end
+
   describe "#escrow_status" do
     context "for an existing transaction" do
       before do
