@@ -44,6 +44,16 @@ class BraintreeTransactionGateway
     OpenStruct.new success?: false
   end
 
+  def refund_settled_at transaction_id
+    event = client
+      .find(transaction_id)
+      .status_history
+      .find { |event| event.status == 'settled' }
+    event.timestamp if event
+  rescue Braintree::NotFoundError
+    raise TransactionMissing, transaction_id
+  end
+
   private
 
   def transaction_with_order_id order_id
