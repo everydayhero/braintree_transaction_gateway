@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock"
   spec.add_development_dependency "vcr"
 
-  spec.add_runtime_dependency "braintree", "~> 2.29.0"
+  spec.add_runtime_dependency "braintree", "~> 2.29"
   spec.add_runtime_dependency "activesupport", ">= 4.0.0"
   spec.add_runtime_dependency "i18n", "~> 0.6.4"
 end
