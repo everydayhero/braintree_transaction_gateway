@@ -1,6 +1,7 @@
 require "braintree"
 require "braintree_transaction_gateway/version"
 require "braintree_transaction_gateway/configuration"
+require "braintree_transaction_gateway/dispute"
 require "instrumented_braintree"
 
 class BraintreeTransactionGateway
@@ -20,6 +21,26 @@ class BraintreeTransactionGateway
 
   def charge *args
     client.sale *args
+  end
+
+  def disputes from_date, to_date
+    client.search do |search|
+      search.dispute_date >= from_date
+      search.dispute_date <= to_date
+    end.flat_map do |transaction|
+      transaction.transaction.disputes.map do |dispute|
+        Dispute.from transaction.transaction_id, dispute
+      end
+    end.select do |dto|
+      dto.created_between? from_date, to_date
+    end
+  end
+
+  def disputes_for_transaction transaction_id
+    transaction = client.find transaction_id
+    transaction.disputes.map do |dispute|
+      Dispute.from transaction.id, dispute
+    end
   end
 
   def escrow_status transaction_id

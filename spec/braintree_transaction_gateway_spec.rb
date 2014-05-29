@@ -1,7 +1,63 @@
 require "helper"
+require 'money'
+require 'monetize'
 
 describe BraintreeTransactionGateway do
   let(:gateway) { BraintreeTransactionGateway.new }
+
+  context "disputed transactions" do
+    let(:transaction_id) { "mw8kz36" }
+    let(:expected_dispute) do
+      BraintreeTransactionGateway::Dispute.new(
+        transaction_id,
+        Date.civil(2014, 5, 2),
+        Money.us_dollar(15_00),
+        Date.civil(2014, 5, 19),
+        "open",
+        "general"
+      )
+    end
+
+    let(:braintree_transaction) do
+      double(:transaction,
+        id: transaction_id,
+        status: "settled",
+        disputes: [
+          double(:dispute,
+                 received_date: Date.civil(2014, 5, 2),
+                 amount: "15.0".to_d,
+                 currency_iso_code: "USD",
+                 reply_by_date: Date.civil(2014, 5, 19),
+                 status: "open",
+                 reason: "general",
+          ),
+        ],
+      )
+    end
+
+    describe "#disputes" do
+      let(:from) { Date.civil 2014, 5, 1 }
+      let(:to) { Date.civil 2014, 6, 1 }
+      it "returns disputes in range" do
+        allow(Braintree::Transaction)
+          .to receive(:search).and_return([braintree_transaction])
+
+        @result = gateway.disputes from, to
+        expect(@result).to eq [expected_dispute]
+      end
+    end
+
+    describe "#disputes_for_transaction" do
+      it "returns disputes attached to a specific transaction" do
+        allow(Braintree::Transaction)
+          .to receive(:find).with(transaction_id)
+          .and_return(braintree_transaction)
+
+        @result = gateway.disputes_for_transaction transaction_id
+        expect(@result).to eq [expected_dispute]
+      end
+    end
+  end
 
   describe "#charge" do
     context "when successful" do
