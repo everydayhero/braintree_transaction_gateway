@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "braintree", "~> 2.29"
   spec.add_runtime_dependency "activesupport", ">= 4.0.0"
-  spec.add_runtime_dependency "i18n", "~> 0.6.4"
+  spec.add_runtime_dependency "i18n", "~> 0.7"
   spec.add_runtime_dependency "money"
   spec.add_runtime_dependency "monetize"
 end
